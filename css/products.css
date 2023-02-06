@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1440px;
+    margin: 0 auto;
+}
+body{
+    font-family: 'Inter';
+}
+.container{
+    width: 1440px;
+    margin: 0 auto;
+}
+.banner{
+    margin-top: 30px;
+}
+.banner img{
+    width: 100%;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.header_left h5{
+    font-size: 25px;
+    
+}
+ .header_right li{
+    display: inline-block;
+}
+.header_right a{
+    text-decoration: none; 
+    padding: 0 15px;
+    font-size: 20px;
+    color:black;
+    font-weight: bold;
+} 
+.signIn button{
+    width: 85px;
+    height: 42px;
+    margin: 0 15px;
+    border: 1px solid #F54748;
+    background-color: white;
+    border-radius: 5px;
+    color: #F54748;
+    cursor: pointer;
+}
+.signUp button{
+    width: 85px;
+    height: 42px;
+    border-radius: 5px;
+    border: 1px solid #F54748;
+    background-color:  #F54748;
+    color: white;
+    cursor: pointer;
+}
+.menu_one a:hover{
+    color:#F54748;
+}
+.header_right{
+    display: flex;
+    align-items: center;
+}
+.news{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.news_content_left li{
+    list-style: none;
+}
+.news_content_left{
+    margin-top: -12px;
+}
+.news_content_left a{
+    text-decoration: none;
+    line-height: 38px;
+    color:black;
+    font-weight: bold;
+}
+.news_content{
+    display: flex;
+
+}
+.content_item img{
+    margin-left: 40px ;
+    width: 405px;
+    border-radius: 20px;
+}
+.content_item p{
+    font-weight: bold;
+    padding-left: 40px;
+    padding-top: 18px;
+}
+.content_item strong{
+    padding-left: 40px;
+    line-height: 50px;
+    color:#F54748;
+}
+.content_item button{
+    margin-left:40px ;
+    margin-bottom: 50px;
+    width: 405px;
+    height: 42px;
+    border-radius: 5px;
+    color:white;
+    background-color: black;
+}
+.fooster_home{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+.fooster_home h5{
+    font-size: 25px;
+}
+.fooster_home li{
+    display: inline-block;
+}
+.fooster_home a{
+    text-decoration: none;
+    padding: 0 15px;
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+}
+.fooster_home a:hover{
+    color:#F54748;
+}
