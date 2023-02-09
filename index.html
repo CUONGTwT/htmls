@@ -258,6 +258,9 @@
             const Contact = document.querySelector('#Contact')
             const hrefs = window.location.href
 
+            if (hrefs.endsWith('/')) {
+                Home.style.color = 'red'
+            }
             if (hrefs.endsWith('/index.html')) {
                 Home.style.color = 'red'
             }
