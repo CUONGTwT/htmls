@@ -23,6 +23,15 @@
 
                 </span>
             </div>
+            <div class="close" onclick="showhide()">
+                <span>
+
+                </span>
+                <span>
+
+                </span>
+
+            </div>
             <div class="header_left">
                 <h5>Fudo<span style="color:#F54748">.</span></h5>
             </div>
@@ -41,81 +50,7 @@
                 <div class="signUp">
                     <a href=".comp/signUp.html"><button>Sign Up</button></a>
                 </div> -->
-                <script>
-                    let headerLast = ``
-                    let headerfull = `<div class="menu">
-                    <ul>
-                        <li><a href=".comp/home.html">Home</a></li>
-                        <li><a href=".comp/product.html">About Us</a></li>
-                        <li><a href=".comp/detail.html">Contact Us</a></li>
-                    </ul>
-                </div> <div class="signIn">
-                    <a href=".comp/login.html"><button>Sign In</button></a>
-                </div> <div class="signUp">
-                    <a href=".comp/signUp.html"><button>Sign Up</button></a>
-                </div>`
-                    let headerSign = `<div class="signIn">
-                    <a href=".comp/login.html"><button>Sign In</button></a>
-                </div> <div class="signUp">
-                    <a href=".comp/signUp.html"><button>Sign Up</button></a>
-                </div>`
-                    let headerMenu = ` <div class="close" onclick="showhide()">
-                    <span>
 
-                    </span>
-                    <span>
-
-                    </span>
-                   
-                </div><div class="menu">
-                    <ul>
-                        <li><a href=".comp/home.html">Home</a></li>
-                        <li><a href=".comp/product.html">About Us</a></li>
-                        <li><a href=".comp/detail.html">Contact Us</a></li>
-                    </ul>
-                </div>`
-
-                    const header = document.querySelector('.header')
-                    const menu_content = document.createElement('div')
-                    menu_content.className = 'header_sign'
-                    const headerRight = document.querySelector('.header_right')
-                    const open = document.querySelector('.open')
-
-                    console.log(headerRight)
-                    window.addEventListener("load", () => {
-                        if (window.innerWidth < 660) {
-                            headerRight.innerHTML = headerMenu
-                            menu_content.innerHTML = headerSign
-                            header.appendChild(menu_content)
-                        } else {
-
-                            headerRight.innerHTML = headerfull
-
-
-                        }
-                    })
-                    window.addEventListener("resize", () => {
-                        if (window.innerWidth < 660) {
-                            headerRight.innerHTML = headerMenu
-                            menu_content.innerHTML = headerSign
-                            header.appendChild(menu_content)
-
-                        } else {
-                            headerRight.innerHTML = headerfull
-                            header.removeChild(menu_content)
-
-                        }
-                    })
-                    const showhide = () => {
-                        headerRight.classList.toggle('active')
-                    }
-                    window.addEventListener('scroll', () => {
-                        console.log('w')
-                        if (document.documentElement.scrollTop > 20) {
-                            header.classList.add('active1')
-                        } else { header.classList.remove('active1') }
-                    })
-                </script>
             </div>
         </div>
         <div class="sub_content">
@@ -294,6 +229,76 @@
         </div>
     </div>
     </div>
+    <script>
+        let headerLast = ``
+        let headerfull = `<div class="menu">
+        <ul>
+            <li><a href=".comp/home.html">Home</a></li>
+            <li><a href=".comp/product.html">About Us</a></li>
+            <li><a href=".comp/detail.html">Contact Us</a></li>
+        </ul>
+    </div> <div class="signIn">
+        <a href=".comp/login.html"><button>Sign In</button></a>
+    </div> <div class="signUp">
+        <a href=".comp/signUp.html"><button>Sign Up</button></a>
+    </div>`
+        let headerSign = `<div class="signIn">
+        <a href=".comp/login.html"><button>Sign In</button></a>
+    </div> <div class="signUp">
+        <a href=".comp/signUp.html"><button>Sign Up</button></a>
+    </div>`
+        let headerMenu = ` <div class="menu">
+        <ul>
+            <li><a href=".comp/home.html">Home</a></li>
+            <li><a href=".comp/product.html">About Us</a></li>
+            <li><a href=".comp/detail.html">Contact Us</a></li>
+        </ul>
+    </div>`
+
+        const header = document.querySelector('.header')
+        const menu_content = document.createElement('div')
+        menu_content.className = 'header_sign'
+        const headerRight = document.querySelector('.header_right')
+        const opens = document.querySelector('.open')
+        const closes = document.querySelector('.close')
+        console.log(headerRight)
+        window.addEventListener("load", () => {
+            if (window.innerWidth < 600) {
+                headerRight.innerHTML = headerMenu
+                menu_content.innerHTML = headerSign
+                header.appendChild(menu_content)
+            } else {
+
+                headerRight.innerHTML = headerfull
+
+
+            }
+        })
+        window.addEventListener("resize", () => {
+            if (window.innerWidth < 600) {
+                headerRight.innerHTML = headerMenu
+                menu_content.innerHTML = headerSign
+                header.appendChild(menu_content)
+
+            } else {
+                headerRight.innerHTML = headerfull
+                header.removeChild(menu_content)
+
+            }
+        })
+        const showhide = () => {
+            headerRight.classList.toggle('active')
+            closes.classList.toggle('active')
+            opens.classList.toggle('active')
+
+        }
+        window.addEventListener('scroll', () => {
+            console.log('w')
+            if (document.documentElement.scrollTop > 20) {
+                header.classList.add('active1')
+            } else { header.classList.remove('active1') }
+        })
+    </script>
 </body>
 
 </html>
